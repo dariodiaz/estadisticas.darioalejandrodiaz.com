@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Average Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Number Average Calculator</h1>
+    <div>
+        <label for="numCount">How many numbers do you want to enter?</label>
+        <input type="number" id="numCount" min="1" max="100">
+        <button onclick="createInputs()">Create Input Boxes</button>
+    </div>
+    <div id="inputContainer"></div>
+    <button onclick="calculateAverage()" style="display: none;" id="calculateBtn">Calculate Average</button>
+    <div id="resultContainer">
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

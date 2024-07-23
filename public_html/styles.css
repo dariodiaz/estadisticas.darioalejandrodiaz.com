@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+input, button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #fff9c4;
+    border: 1px solid #ffd54f;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #fff176;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#inputContainer {
+    margin-top: 20px;
+}
+
+/* ... (previous styles remain the same) ... */
+
+#resultContainer {
+    overflow: hidden;
+    height: 50px;
+}
+
+#result {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#result.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-result {
+    animation: fadeInUp 0.5s ease-out forwards;
+}

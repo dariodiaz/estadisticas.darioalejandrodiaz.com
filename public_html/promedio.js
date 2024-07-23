@@ -1,9 +1,9 @@
-function calcularMediaAritmetica(lista) {
-    let sumaLista = 0;
-    for (let i=0; i<lista.length; i++) {
-        sumaLista += lista[i];
+function calcAverage(list) {
+    let sum = 0;
+    for (let i=0; i<list.length; i++) {
+        sum += list[i];
     }
 
-    const promedio = sumaLista / lista.length;
-    return promedio;
+    const average = sum / list.length;
+    return average;
 }
