@@ -13,6 +13,7 @@ function createInputs() {
     }
     
     document.getElementById('calculateBtn').style.display = 'block';
+    document.getElementById('initialInput').style.display = 'none';
     // Hide the result when creating new inputs
     document.getElementById('result').textContent = '';
     document.getElementById('result').classList.remove('animate-result');
@@ -38,4 +39,27 @@ function calculateAverage() {
     resultElement.classList.remove('animate-result');
     void resultElement.offsetWidth; // Trigger a reflow
     resultElement.classList.add('animate-result');
+
+    // Show the Start Over button
+    document.getElementById('startOverBtn').style.display = 'block';
+}
+
+function startOver() {
+    // Reset the number input
+    document.getElementById('numCount').value = '';
+
+    // Clear the input container
+    document.getElementById('inputContainer').innerHTML = '';
+
+    // Hide the Calculate and Start Over buttons
+    document.getElementById('calculateBtn').style.display = 'none';
+    document.getElementById('startOverBtn').style.display = 'none';
+
+    // Show the initial input
+    document.getElementById('initialInput').style.display = 'block';
+
+    // Clear the result
+    const resultElement = document.getElementById('result');
+    resultElement.textContent = '';
+    resultElement.classList.remove('animate-result');
 }

@@ -80,3 +80,16 @@ button:active {
 .animate-result {
     animation: fadeInUp 0.5s ease-out forwards;
 }
+
+/* ... (previous styles remain the same) ... */
+
+#startOverBtn {
+    display: block;
+    margin: 20px auto;
+    background-color: #ffeb3b;
+    border: 1px solid #fdd835;
+}
+
+#startOverBtn:hover {
+    background-color: #fdd835;
+}
